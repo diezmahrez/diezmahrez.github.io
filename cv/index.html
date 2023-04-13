@@ -3,6 +3,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resume Mahrus Husaeni</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="https://kit.fontawesome.com/6f81f38510.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -58,18 +60,18 @@
         <div class="Technical-Skills">
           <h4>Technical Skills</h4>
           <div class="Technical-Content">
-          <p>Web Full-Stack Developer</p>
-          <p>Web UI UX Design</p>
-          <p>Network Troubleshooting</p>
-          <p>Hardware Repair and Maintenance</p>
+          <div class="list"><i class="fa-solid fa-globe"></i><p>Web Full-Stack Developer</p></div>
+          <div class="list"><i class="fa-brands fa-uikit"></i><p>Web UI UX Design</p></div>
+          <div class="list"><i class="fa-solid fa-network-wired"></i><p>Network Troubleshooting</p></div>
+          <div class="list"><i class="fa-solid fa-computer"></i><p>Hardware Repair and Maintenance</p></div>
         </div>
         </div>
         <div class="Personal-Skills">
           <h4>Personal-Skills</h4>
           <div class="Pers-Skills">
-            <p>Reliable as a team or individually</p>
-            <p>Motivated to learn new things</p>
-            <p>Creative and Innovative in doing something</p>
+            <div class="list"><i class="fa-solid fa-circle-check"></i><p>Reliable as a team or individually</p></div>
+            <div class="list"><i class="fa-solid fa-circle-check"></i><p>Motivated to learn new things</p></div> 
+            <div class="list"><i class="fa-solid fa-circle-check"></i><p>Creative and Innovative in doing something</p></div>
           </div>
         </div>
         
@@ -262,7 +264,7 @@
       color: #ffff;
     }
     .Skills{
-      padding: 100px 25px;
+      padding: 50px 25px;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -271,14 +273,29 @@
     .Technical-Content{
       padding: 15px;
     }
+    .Technical-Content .list{
+      display: flex;
+      align-content: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: baseline;
+      
+    }
+    .Technical-Content .list i{
+      padding-right: 10px;
+    }
     .Technical-Skills h4{
       font-weight: 600;
+      border-bottom: 3px solid #007ced;
+      display: inline-block;
     }
     .Application{
       padding-bottom: 15px;
     }
     .Application h4{
-      font-weight: bolder;
+      font-weight: 600;
+      border-bottom: 3px solid #007ced;
+      display: inline-block;
     }
     .Application-content{
       display: flex;
@@ -307,13 +324,26 @@
     }
     .Personal-Skills h4{
       font-weight: 600;
+      border-bottom: 3px solid #007ced;
+      display: inline-block;
     }
     .Pers-Skills{
       padding: 15px;
     }
+    .Pers-Skills .list{
+      display: flex;
+      align-content: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: baseline;
+    }
+    .Pers-Skills .list i{
+      padding-right: 10px;
+    }
     .Prog-Languages h4{
       font-weight: 600;
-    
+      border-bottom: 3px solid #007ced;
+      display: inline-block;
     }
     .Programm{
       display: flex;
@@ -349,6 +379,9 @@
     }
     .education h4{
       font-weight: 600;
+      border-bottom: 3px solid #007ced;
+      display: inline-block;
+      margin-bottom: 25px;
     }
     .education-content{
       display: flex;
@@ -361,10 +394,12 @@
     }
     .education-content .edu.content-1{
       padding-bottom: 15px;
+      text-align: left;
     }
     .education-content .edu.content-2{
       margin-top: -15px;
       border-bottom: unset;
+      text-align: left;
     }
     .education-content .edu p.tahun{
       margin-left: -25px;
@@ -386,10 +421,13 @@
       padding-left: 15px;
     }
     .experience{
-      max-width: 410px;
+      max-width: 430px;
     }
     .experience h4{
       font-weight: 600;
+      border-bottom: 3px solid #007ced;
+      display: inline-block;
+      margin-bottom: 25px;
     }
     .experience-content{
       display: flex;
@@ -402,10 +440,12 @@
     }
     .experience-content .exp.content-1{
       padding-bottom: 15px;
+      text-align: left;
     }
     .experience-content .exp.content-2{
       margin-top: -15px;
       border-bottom: unset;
+      text-align: left;
     }
     .experience-content .exp p.tahun{
       margin-left: -25px;
@@ -444,7 +484,13 @@
         text-align: center;
         flex-direction: column;
       }
+      .Technical-Content .list , .Pers-Skills .list {
+        text-align: left;
+      }
       .Application-content{
+        justify-content: center;
+      }
+      .Programm{
         justify-content: center;
       }
       .edu-exp{
@@ -452,6 +498,9 @@
       }
       .experience{
         padding-top: 35px;
+      }
+      .edu-exp{
+        text-align: center;
       }
     }
 
