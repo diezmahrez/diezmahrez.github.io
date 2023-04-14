@@ -159,8 +159,60 @@
           </div>
         </div>
       </div>
-      
     </div>
+
+    <div class="sertifikasi">
+    <h4>Certification</h4>
+    <div class="certification">
+      <div class="cert-content">
+        <div class="cert 1">
+          <div class="gambar">
+            <img src="./aws.png" alt="" style="width: 100px;">
+          </div>
+          <div class="deskripsi">
+            <p class="judul">AWS Academy Cloud Foundations</p>
+            <p class="penerbit">Amazon Web Services</p>
+            <p class="tahun-terbit">Issued Mar 2023</p>
+            <a class="btn btn-primary btn-sm" href="https://www.credly.com/badges/fe4ba856-2aa5-4eab-acf6-6da938716c47/linked_in_profile" target="_blank">Show Cradential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="cert 2">
+          <div class="gambar">
+            <img src="./ccna.png" alt="" style="width: 80px;">
+          </div>
+          <div class="deskripsi">
+            <p class="judul">CCNA: Introduction to Networks</p>
+            <p class="penerbit">CISCO</p>
+            <p class="tahun-terbit">Issued Jul 2020</p>
+            <a class="btn btn-primary btn-sm" href="https://www.credly.com/badges/f239b972-7eb4-46e0-8d30-bb86aa2b5423/linked_in_profile" target="_blank">Show Cradential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="cert 3">
+          <div class="gambar">
+            <img src="./or.png" alt="" style="width: 80px;">
+          </div>
+          <div class="deskripsi">
+            <p class="judul">Certified Secured Computer User (CSCU) v2</p>
+            <p class="penerbit">EC- Council</p>
+            <p class="tahun-terbit">Issued Jan 2020</p>
+            <a class="btn btn-primary btn-sm" href="./ecc.pdf" target="_blank">Show Cradential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="cert 4">
+          <div class="gambar">
+            <img src="./ec.png" alt="" style="width: 80px;">
+          </div>
+          <div class="deskripsi">
+            <p class="judul">PL/SQL Database Programming </p> 
+            <p class="penerbit">Oracle</p>
+            <p class="tahun-terbit">Issued May 2021</p>
+            <a class="btn btn-primary btn-sm" href="./orc.png" target="_blank">Show Cradential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
     </div>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -192,7 +244,7 @@
         font-weight: 400;
     }
     .About-me{
-      padding: 100px 0px;
+      padding: 50px 0px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -352,7 +404,7 @@
       flex-wrap: wrap;
     }
     .Programm .Gambar{
-      border: 2px solid #aaa;
+      border: 2px solid #aaaaaa;
       border-radius: 10px;
       margin-right: 10px;
       text-align: center;
@@ -466,6 +518,73 @@
     .experience-content .exp p.pesan{
       padding-left: 15px;
     }
+    .sertifikasi{
+      padding: 50px 0px;
+      max-width: 865px;
+      margin: auto;
+      padding-left: 25px;
+    }
+    .sertifikasi h4{
+      font-weight: 600;
+      border-bottom: 3px solid #007ced;
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+    .cert-content{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .cert-content .cert{
+      display: flex;
+      flex-direction: row;
+      border: 2px solid #aaa;
+      border-radius: 10px;
+      margin-right: 10px;
+      padding: 15px 15px 15px 0px;
+      margin-top: 20px;
+      transition: all .3s ease-in-out;
+      width: 405px;
+    }
+    .cert-content .cert:hover{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+      box-shadow: #66666673 -1px 9px 12px 0px;
+    }
+    .cert-content .cert{
+      max-width: 420px;
+    }
+    .cert-content .cert .Gambar{
+      margin-top: -15px;
+      margin-bottom: -15px;
+      border-radius: 10px 0px 0px 10px;
+      background-color: rgba(102, 102, 102, 0.219);
+      width: 110px;
+      text-align: -webkit-center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .cert-content .cert .Gambar img{
+      display: flex;
+      justify-items: center;
+    }
+    .cert-content .cert .deskripsi{
+      padding: 0 20px;
+      font-size: 10px;
+      max-width: 300px;
+    }
+    .cert-content .cert .deskripsi p.judul {
+      font-weight: 600;
+    }
+    .deskripsi p{
+      margin-bottom: 8px;
+    }
+
 
     
     @media screen and (max-width: 601px) {
@@ -502,7 +621,23 @@
       .edu-exp{
         text-align: center;
       }
+      .sertifikasi {
+        text-align: center;
+      }
+      .cert-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: left;
+      }
+      .cert-content .cert{
+        width: 340px;
+      }
+      
     }
+
+  
 
     
   </style>
