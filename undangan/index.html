@@ -28,6 +28,10 @@
     <script src="assets/library/lightbox/fslightbox.js"></script>
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <style>
@@ -321,6 +325,7 @@
         position: fixed;
         bottom: 10px;
         right: 10px;
+        z-index: 999;
       }
       #player-container #play-pause {
         cursor: pointer;
@@ -329,7 +334,7 @@
         border-radius: 25px;
         width: 40px;
         padding: 12px 18px;
-        z-index: 2;
+        z-index: 100;
         background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiAyNHYtMjRsMjAgMTItMjAgMTJ6Ii8+PC9zdmc+);
         background-repeat: no-repeat !important;
         background-position: center;
@@ -574,7 +579,7 @@
           </div>
         </div>
         <div class="button-open mt-4">
-          <a
+          <a id="buka_undangan"
             href="#profile_pasangan"
             class="btn btn-light"
             onclick="enableScroll()"
@@ -585,8 +590,8 @@
     </section>
     <section id="profile_pasangan">
       <div class="bg-light text-center my-3 p-5">
-        <h1 style="font-family: 'Sacramento', cursive">Undangan Pernikahan</h1>
-        <p data-aos="fade-up" data-aos-duration="3000">
+        <h1 data-aos="fade-down" data-aos-duration="3000" style="font-family: 'Sacramento', cursive">Undangan Pernikahan</h1>
+        <p data-aos="fade-down" data-aos-duration="3000">
           <i>Assalamu’alaikum Warahmatullahi Wabarakatuh</i><br /><br />Maha
           suci Allah SWT yang telah menciptakan makhluk-Nya
           berpasang-pasangan.<br />Ya Allah, perkenankanlah kami merangkai kasih
@@ -632,7 +637,7 @@
           </div>
           <div class="col-1 d-flex justify-content-center align-items-center">
             <div
-              data-aos="zoom-out"
+              data-aos="zoom-in"
               data-aos-offset="0"
               data-aos-duration="3000"
               class="icons-heart h-50 pb-5"
@@ -677,10 +682,11 @@
     </section>
     <section id="save_the_date">
       <div class="text-center my-3 p-3 text-light">
-        <h1 style="font-family: 'Sacramento', cursive">Informasi Acara</h1>
+        <h1  data-aos="flip-left"
+        data-aos-duration="3000" style="font-family: 'Sacramento', cursive">Informasi Acara</h1>
         <div class="row justify-content-center m-0">
           <div
-            data-aos="flip-right"
+            data-aos="flip-left"
             data-aos-offset="0"
             data-aos-duration="3000"
             class="col-lg d-flex flex-column justify-content-center my-3 shadow-lg rounded-5 mx-5"
@@ -882,7 +888,7 @@
           <div class="column">
             <a data-fslightbox="1" href="/undangan/assets/image/IMG_6175.jpeg">
               <img
-                data-aos="flip-right"
+                data-aos="zoom-in"
                 data-aos-offset="0"
                 data-aos-duration="3000"
                 class="rounded-4"
@@ -891,7 +897,7 @@
             /></a>
             <a data-fslightbox="1" href="/undangan/assets/image/IMG_6441.jpeg"
               ><img
-                data-aos="flip-left"
+                data-aos="zoom-in"
                 data-aos-offset="0"
                 data-aos-duration="3000"
                 class="rounded-4"
@@ -902,7 +908,7 @@
           <div class="column">
             <a data-fslightbox="1" href="/undangan/assets/image/IMG_6550.jpeg"
               ><img
-                data-aos="flip-right"
+                data-aos="zoom-in"
                 data-aos-offset="0"
                 data-aos-duration="3000"
                 class="rounded-4"
@@ -911,7 +917,7 @@
             /></a>
             <a data-fslightbox="1" href="/undangan/assets/image/IMG_6228.jpeg"
               ><img
-                data-aos="flip-left"
+                data-aos="zoom-in"
                 data-aos-offset="0"
                 data-aos-duration="3000"
                 class="rounded-4"
@@ -922,7 +928,7 @@
           <div class="column">
             <a data-fslightbox="1" href="/undangan/assets/image/IMG_6230.jpeg"
               ><img
-                data-aos="flip-right"
+                data-aos="zoom-in"
                 data-aos-offset="0"
                 data-aos-duration="3000"
                 class="rounded-4"
@@ -931,7 +937,7 @@
             /></a>
             <a data-fslightbox="1" href="/undangan/assets/image/IMG_6184.jpeg"
               ><img
-                data-aos="flip-left"
+                data-aos="zoom-in"
                 data-aos-offset="0"
                 data-aos-duration="3000"
                 class="rounded-4"
@@ -942,7 +948,7 @@
           <div class="column">
             <a data-fslightbox="1" href="/undangan/assets/image/IMG_6542.jpeg"
               ><img
-                data-aos="flip-right"
+                data-aos="zoom-in"
                 data-aos-offset="0"
                 data-aos-duration="3000"
                 class="rounded-4"
@@ -951,7 +957,7 @@
             /></a>
             <a data-fslightbox="1" href="/undangan/assets/image/IMG_6495.jpeg"
               ><img
-                data-aos="flip-left"
+                data-aos="zoom-in"
                 data-aos-offset="0"
                 data-aos-duration="3000"
                 class="rounded-4"
@@ -964,8 +970,8 @@
     </section>
     <section id="WeddingGift">
       <div class="bg-light text-center align-items-center my-3 py-5 px-2">
-        <h1 style="font-family: 'Sacramento', cursive">Wedding Gift</h1>
-        <div data-aos="fade-up" data-aos-duration="3000">
+        <h1 data-aos="fade-down" data-aos-duration="3000" style="font-family: 'Sacramento', cursive">Wedding Gift</h1>
+        <div data-aos="fade-down" data-aos-duration="3000">
           Doa Restu Anda merupakan karunia yang sangat berarti bagi kami.
           <br />Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat
           memberi kado secara cashless.
@@ -1020,7 +1026,7 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body">
+              <div class="accordion-body" >
                 <div
                   class="qris d-flex justify-content-center py-3"
                   style="width: 100%"
@@ -1043,7 +1049,7 @@
             Barat, 11830
           </p>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="3000">
           <p>
             <button class="btn btn-sm btn-secondary" onclick="copy_alamat()">
               <i class="bi bi-copy me-2"></i>Salin Alamat
@@ -1058,6 +1064,174 @@
         </div>
       </div>
     </section>
+
+    <section id="UcapanKehadiran">
+      <div class="align-items-center my-3 py-5 px-2">
+        <h1 data-aos="fade-down" data-aos-duration="3000"
+          style="font-family: 'Sacramento', cursive"
+          class="text-center text-light"
+        >
+          Ucapan dan Kehadiran
+        </h1>
+        <div class="text-center mb-4 text-light" data-aos="fade-up" data-aos-duration="3000">
+          Ucapkan Selamat dan Doa Restu Kepada Mempelai Untuk Hari Bahagia
+          Mereka Melalui Kolom Berikut :
+        </div>
+        <div class="row m-auto justify-content-center">
+          <div class="col-md card p-2 m-2 col-md-5" style="max-width: 500px" data-aos="fade-up" data-aos-duration="3000">
+            <div class="card-body">
+              <h5>Kirim Ucapan</h5>
+              <form id="form_ucapan" method="POST" action="">
+                <label for="Nama" class="form-label">Nama</label>
+                <input
+                  name="Nama"
+                  class="form-control mb-2"
+                  id="nama"
+                  type="text"
+                  placeholder="Nama"
+                  required
+                />
+                <label for="Ucapan" class="form-label">Ucapan</label>
+                <textarea
+                  name="Ucapan"
+                  class="form-control mb-2"
+                  id="ucapan"
+                  type="text"
+                  placeholder="Ucapan"
+                  required
+                ></textarea>
+                <label for="KonfirmasiKehadiran" class="form-label"
+                  >Konfirmasi Kehadiran</label
+                >
+                <select
+                  name="KonfirmasiKehadiran"
+                  class="form-control mb-2"
+                  id="konfirmasikehadiran"
+                  required
+                >
+                  <option value="">Pilih</option>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                  <option value="Belum Pasti">Belum Pasti</option>
+                </select>
+                <button
+                  id="button-submit"
+                  type="submit"
+                  class="btn mb-2 btn-sm"
+                  style="background: #f15f79; color: white"
+                >
+                  Kirim Ucapan<i class="bi bi-send ms-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div
+            class="col-md card p-2 m-2 col-md-5"
+            style="max-width: 500px; max-height: 380px" data-aos="fade-up" data-aos-duration="3000"
+          >
+            <div class="card-body">
+              <h5>All Comments</h5>
+              <div
+                class="comments"
+                style="
+                  max-height: 295px;
+                  overflow-x: hidden;
+                  overflow-y: overlay;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      async function load() {
+        try {
+          const response = await fetch(
+            "https://script.google.com/macros/s/AKfycbyLrAD1Cytv_ULm9Kp_ZbhlqDMIqvUEDXnV273AQ5qLijk8dd31iDuEyS6m3Tvb6jfANg/exec"
+          );
+          //   console.log(response);
+          const data = await response.json();
+          document
+              .querySelectorAll(
+                "#UcapanKehadiran > div > div.row.m-auto.justify-content-center > div > div > div > div"
+              )
+              .forEach(function (e) {
+                e.remove();
+              });
+          data.forEach(function (item) {
+
+            document.querySelector(".comments").innerHTML +=
+              "<div class='card my-2'>" +
+              "<div class='body p-2'>" +
+              "<div class='row'>" +
+              "<div class='col-1  text-center'>" +
+              "<i class='bi bi-person-circle' style='font-size: 30px'></i>" +
+              "</div>" +
+              "<div class='col ms-1'>" +
+              "<p class='text-capitalize fw-semibold m-0'>" +
+              item.Nama +
+              " - " +
+              "<span class='badge text-bg-secondary fw-normal'>" +
+              item.KonfirmasiKehadiran +
+              "</span></p>" +
+              "<small>" +
+              item.Ucapan +
+              "</small><br/>" +
+              "<small class='text-secondary'> <i class='bi bi-clock me-2'></i>" +
+              item.Date +
+              "</small>" +
+              "</div></div></div></div>";
+          });
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      }
+
+      load();
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#form_ucapan").submit(function (event) {
+          var formData = {
+            Nama: $("#nama").val(),
+            Ucapan: $("#ucapan").val(),
+            KonfirmasiKehadiran: $("#konfirmasikehadiran").val(),
+          };
+          document.getElementById("button-submit").innerHTML =
+            '<span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Kirim Ucapan';
+
+          $.ajax({
+            type: "POST",
+            url: "https://script.google.com/macros/s/AKfycbyvGJ-4N5rmnMzL6eqviVLDoCLuCjMXWKAHIUYht6-TL5IM4LQKdIcEu_6bPDTpY2B0eQ/exec",
+            data: formData,
+            dataType: "json",
+          }).done(function (data) {
+            if (data.result == "success") {
+              Swal.fire({
+                text: "Kirim Ucapan Berhasil!",
+                icon: "success",
+              });
+              document.getElementById("form_ucapan").reset();
+              document.getElementById("button-submit").innerHTML =
+                "Kirim Ucapan";
+              load();
+            } else if (data.result == "error") {
+              Swal.fire({
+                text: "Gagal Mengirim Ucapan!",
+                icon: "error",
+              });
+              document.getElementById("button-submit").innerHTML =
+                "Kirim Ucapan";
+              load();
+            }
+          });
+
+          event.preventDefault();
+        });
+      });
+    </script>
+
     <footer>
       <div class="mt-5">
         <footer class="bg-light text-center text-white">
@@ -1121,11 +1295,23 @@
             class="text-center p-3"
             style="background-color: rgba(0, 0, 0, 0.2)"
           >
-            <small>© 2024 Copyright: Shift Wedding <br/>All Rights Reserved</small>
+            <small
+              >Designed By Mahrus Husaeni <br />All Rights Reserved</small
+            >
           </div>
         </footer>
       </div>
     </footer>
   </body>
+  <script>
+    document.getElementById("buka_undangan").addEventListener("click", function () {
+      var el = document.documentElement,
+        rfs =
+          el.requestFullScreen ||
+          el.webkitRequestFullScreen ||
+          el.mozRequestFullScreen;
+      rfs.call(el);
+    });
+  </script>
   <script src="/undangan/assets/library/lightbox/fslightbox.js"></script>
 </html>
