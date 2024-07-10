@@ -1244,6 +1244,19 @@
             });
 
           data.forEach(function (item) {
+            let dates = new Date(item.Date);
+            let date_string = dates
+              .toLocaleString("id-ID", {
+                timeZone: "Asia/Jakarta",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                timeZoneName: "short",
+              })
+              .replace(/\./g, ":");
             document.querySelector(".comments").innerHTML +=
               "<div class='card my-2'>" +
               "<div class='body p-2'>" +
@@ -1262,7 +1275,7 @@
               item.Ucapan +
               "</small><br/>" +
               "<small class='text-secondary'> <i class='bi bi-clock me-2'></i>" +
-              item.Date +
+              date_string +
               "</small>" +
               "</div></div></div></div>";
           });
